@@ -1,0 +1,97 @@
+<html>
+<head>
+ <meta name="description" content="PF Calculator">
+  <meta name="keywords" content="HTML5,CSS,JavaScript,bootstrap,jquery">
+  <meta name="author" content="Ashok">
+  <!--
+  SiteName : PF Calculator 
+# Site developed by:@author P.Ashok || ashok88.java@gmail.com
+-->
+<title>EPF Calculator</title>
+<link rel = "icon" href = "js/pf.jpg"/>
+ <link rel="stylesheet" type="text/css" href="css/widget.css" />
+
+ <script src="js/jquery.min.js"></script> 
+ <link type="text/css" href="css/jquery-ui.css" rel="stylesheet" />
+ <script type="text/javascript" src="js/jquery-ui.js"></script>
+ <script src="js/Chart.js"></script>
+  <script src="script.js"></script>
+   <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body background-color="groove">
+<div class="container" style="background-color:	#99CC99" id="container">
+  <div style="text-align:center;background-color:orange;height:30px"><h3>Provident Fund Calculator</h3></div>
+  <div class="row" style="margin-top: 50px;">
+
+    <div class="col-sm-5">
+   <table class="table table-bordered grey">
+  	<tr>
+        <td width="150" valign="top"><div class="field_text">Principle Amount</div></td>
+        <td><input id="loan_amount" type="text" class="input-custom" value="2000" name="loan_amount" onkeyup="calculate()"></td>
+    </tr>
+    <tr>
+        <td valign="top"><div class="field_text">Tenure</div></td>
+        <td><input id="loan_terms" type="text" class="input-custom" name="loan_terms" value="3" checked onkeyup="calculate()">
+         <div class="btn-group" data-toggle="buttons">
+		  <label class="btn btn-primary active">
+		    <input type="radio" name="loan_terms_year_month" id="loan_terms_year" value="year"  onchange="calculate()"> YR
+		  </label>
+		  <label class="btn btn-primary">
+		    <input type="radio" name="loan_terms_year_month" id="loan_terms_month" value="month" onchange="calculate()"> MO
+		  </label>
+	</div>
+	</td>
+    </tr>
+    <tr>
+        <td valign="top"><div class="field_text">Interest Rate</div></td>
+        <td><input id="interest_rate" type="text" class="input-custom" value="4" name="interest_rate" onkeyup="calculate()">%</td>
+    </tr>
+</table>
+    </div>
+    <div class="col-sm-3">
+      <div class="field_text" style="font-weight:bold">Principle Amount</div><br />
+	  <span id="monthly_payment" class="result_data"></span><br /><br />
+	  <div class="field_text" style="font-weight:bold">Total Interest Payment</div><br />
+	  <span id="total_interest" class="result_data"></span><br /><br />
+	  <div class="field_text" style="font-weight:bold">Total Payments (Interest + Principal)</div><br />
+	   <span id="total_payment" class="result_data"></span>
+	   
+    </div>
+    <div class="col-sm-4">
+		<canvas id="pie_chart" style="height: 400px;width:500px"></canvas>
+	</div>
+	</div>
+	
+  		<hr style="height:10px;width:100%;background-color:DodgerBlue">
+	<div class="row">
+		<div class="col-sm-4"><label>Calculate showing Amount starting from</label></div>
+		 <div class="col-sm-4">
+				<div class="input-group">
+				 <input type="text" class="form-control" id="datepicker" onchange="changeCalender()"><span class="input-group-addon"><i class="fa fa-calendar" style="font-size:22px" aria-hidden="true"></i></span>
+				</div>
+		</div>	
+			
+		<div class="col-sm-4">
+		 <label>
+			<select id="select1" class="form-control">
+			<option value="calendar_year" selected>Calendar Year</option>
+			<option value="finacial_year" >Financial Year</option>
+			</select></label>
+		
+		</div>
+		
+	</div><br><br>
+	<div class="row">
+		<div class="col-sm-12" >
+			<canvas  id="bar_chart"></canvas>
+		</div> 
+	</div>		<br><br>
+	<div class="row">
+		<div class="col-sm-12">
+			<div  id="dvTable"></div>
+		</div> 
+	</div> 
+</div>	
+
+</body>
+</html>
