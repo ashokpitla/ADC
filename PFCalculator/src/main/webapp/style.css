@@ -1,0 +1,21 @@
+#main{
+	background-color:rgb(240, 240, 240);
+}
+h1{
+	text-align:center;
+	background-color:rgb(191, 255, 0);
+}
+#cal{
+	width:350px;
+}
+h4{
+	text-align:center;
+}
+#chartContainer1,#chartContainer{
+	height: 350px;
+	width: 100%"
+}
+p{
+	text-align:center;
+	font-size: 30px;
+}
