@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+ $(document).ready(function(){
+	 $("#zoomIn").click(function(){
+		 $("#im").animate({
+			 width:"450px",height:"400px",opacity:0.5
+		 },2000);
+	 });
+	 $("#zoomOut").click(function(){
+		 $("#im").animate({
+			 width:"250px",height:"200px",opacity:0.5
+		 },2000);
+	 });
+ });
+</script>
+<div class="container">
+<div>
+ <input type="button" id="zoomIn" value="zoomIn">&nbsp;&nbsp;&nbsp;
+ <input type="button" id="zoomOut" value="zoomOut">
+</div>
+ <div class="zoomIn">
+  <img id="im" src="./images/epfo_logo.gif">
+ </div>
+ </div>
+</body>
+</html>
